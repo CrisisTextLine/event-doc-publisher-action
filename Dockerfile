@@ -1,5 +1,9 @@
 # Container image that runs your code
-FROM node:18-alpine3.15
+FROM golang:1.19.1
+
+# insall node, npm
+RUN apt update
+RUN apt install nodejs npm -y
 
 # install the generator
 RUN npm install -g @asyncapi/generator
