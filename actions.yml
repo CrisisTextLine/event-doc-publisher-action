@@ -1,0 +1,20 @@
+# action.yml
+name: 'event-doc-generator'
+description: 'Generate event and command documentation from an asyncapi yaml file'
+inputs:
+  yaml-file-path:
+    description: 'File path to the asyncapi yaml file'
+    required: true
+    default: 'docs/asyncapi.yml'
+  doc-output-directory:
+    description: 'Output directory for the generated doc file'
+    required: false
+    default: 'docs'
+outputs:
+  status: # id of output
+    description: 'Status of the doc generation'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.yaml-file-path }}
