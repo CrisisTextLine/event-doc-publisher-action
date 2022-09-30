@@ -1,21 +1,26 @@
-# Hello world docker action
+# Event Bus Documentation Generator
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action generates a markdown file and checks it in to a repo.
 
 ## Inputs
 
-## `who-to-greet`
+## `yaml-file-path`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The Asyncapi `yaml` file path.
+
+## `doc-output-directory`
+
+**Required** Output directory for the generated `yaml` file.
 
 ## Outputs
 
-## `time`
+## `status`
 
 The time we greeted you.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: actions/event-doc-publisher@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  yaml-file-path: 'docs/asyncapi.yaml'
+  doc-output-directory: 'docs'
