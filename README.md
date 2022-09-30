@@ -23,6 +23,7 @@ The time we greeted you.
 ```yaml
 uses: actions/event-doc-publisher@v1
 with:
-  yaml-file-path: 'docs/asyncapi.yaml'
-  doc-output-directory: 'docs'
+  yaml-file-path: 'app/docs/asyncapi.yaml'
+  doc-output-directory: 'app/docs'
+  go-module-path: 'app/docs'
 ```
