@@ -20,7 +20,9 @@ The time we greeted you.
 
 ## Example usage
 
+```yaml
 uses: actions/event-doc-publisher@v1
 with:
   yaml-file-path: 'docs/asyncapi.yaml'
   doc-output-directory: 'docs'
+```
