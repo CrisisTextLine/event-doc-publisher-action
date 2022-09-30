@@ -9,7 +9,11 @@ inputs:
   doc-output-directory:
     description: 'Output directory for the generated doc file'
     required: false
-    default: 'docs'
+    default: 'app/docs'
+  go-module-path:
+    description: 'Output directory for the generated doc file'
+    required: false
+    default: 'app/docs'
 outputs:
   status: # id of output
     description: 'Status of the doc generation'
@@ -19,3 +23,4 @@ runs:
   args:
     - ${{ inputs.yaml-file-path }}
     - ${{ inputs.doc-output-directory }}
+    - ${{ inputs.go-module-path }}
