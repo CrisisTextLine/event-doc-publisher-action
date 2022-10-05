@@ -23,4 +23,3 @@ runs:
   args:
     - ${{ inputs.yaml-file-path }}
     - ${{ inputs.doc-output-directory }}
-    - ${{ inputs.go-module-path }}
